@@ -14,7 +14,7 @@ rv-brand = "Morphe"
 build-mode = "both"
 patcher-args = "-e 'Custom branding' -OcustomName=YouTube"
 version = "auto"
-# arch = "both" 
+arch = "both" 
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
