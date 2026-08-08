@@ -1,6 +1,6 @@
 {
-  "version": "v21.04.223 (patches 1.38.0.mpp)",
-  "versionCode": 15,
-  "zipUrl": "https://github.com/KassMiw/MRV/releases/download/15/youtube-morphe-module-v21.04.223-arm-v7a.zip",
+  "version": "v21.04.223 (patches 1.39.0.mpp)",
+  "versionCode": 16,
+  "zipUrl": "https://github.com/KassMiw/MRV/releases/download/16/youtube-morphe-module-v21.04.223-arm-v7a.zip",
   "changelog": "https://raw.githubusercontent.com/KassMiw/MRV/update/build.md"
 }
