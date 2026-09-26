@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRV - Music & YouTube Morphe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00bcd4 0%, #2196f3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #b0bec5;
+            font-weight: 300;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 188, 212, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 188, 212, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 188, 212, 0.2);
+        }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #00bcd4;
+        }
+
+        .material-icons {
+            margin-right: 10px;
+            font-size: 1.8em;
+        }
+
+        .downloads {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #26c6da 0%, #00acc1 100%);
+            box-shadow: 0 4px 16px rgba(0, 188, 212, 0.3);
+            transform: translateX(5px);
+        }
+
+        .download-btn:active {
+            transform: translateX(5px) scale(0.98);
+        }
+
+        .download-btn .material-icons {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+        .btn-label {
+            flex: 1;
+            text-align: left;
+        }
+
+        .btn-size {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        .section-subtitle {
+            font-size: 0.9em;
+            color: #90caf9;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(0, 188, 212, 0.2);
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #607d8b;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        .footer-link {
+            color: #00bcd4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #26c6da;
+            text-decoration: underline;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 188, 212, 0.2);
+            color: #00bcd4;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+
+        .architecture-note {
+            font-size: 0.85em;
+            color: #90caf9;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MRV</h1>
+            <p class="subtitle">Music & YouTube Morphe - Download Aplikasi & Module Terbaru</p>
+        </header>
+
+        <div class="content-grid">
+            <!-- Music Morphe Card -->
+            <div class="card">
+                <div class="card-title">
+                    <span class="material-icons">music_note</span>
+                    Music Morphe
+                </div>
+                <p class="section-subtitle">v9.15.51</p>
+                
+                <div class="divider"></div>
+                
+                <h3 style="font-size: 1em; margin-bottom: 12px; color: #64b5f6;">APK</h3>
+                <div class="downloads">
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/music-morphe-v9.15.51-arm-v7a.apk" class="download-btn">
+                        <span class="btn-label">
+                            <span>ARM v7a</span>
+                            <span class="architecture-note">32-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/music-morphe-v9.15.51-arm64-v8a.apk" class="download-btn">
+                        <span class="btn-label">
+                            <span>ARM64 v8a</span>
+                            <span class="architecture-note">64-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 style="font-size: 1em; margin-bottom: 12px; color: #64b5f6;">Module</h3>
+                <div class="downloads">
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/music-morphe-module-v9.15.51-arm-v7a.zip" class="download-btn">
+                        <span class="btn-label">
+                            <span>Module ARM v7a</span>
+                            <span class="architecture-note">32-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/music-morphe-module-v9.15.51-arm64-v8a.zip" class="download-btn">
+                        <span class="btn-label">
+                            <span>Module ARM64 v8a</span>
+                            <span class="architecture-note">64-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                </div>
+
+                <div class="badge">
+                    <span class="material-icons" style="font-size: 0.9em; vertical-align: middle;">info</span>
+                    Pilih sesuai arsitektur perangkat Anda
+                </div>
+            </div>
+
+            <!-- YouTube Morphe Card -->
+            <div class="card">
+                <div class="card-title">
+                    <span class="material-icons">play_circle_filled</span>
+                    YouTube Morphe
+                </div>
+                <p class="section-subtitle">v21.16.256</p>
+                
+                <div class="divider"></div>
+                
+                <h3 style="font-size: 1em; margin-bottom: 12px; color: #64b5f6;">APK</h3>
+                <div class="downloads">
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/youtube-morphe-v21.16.256-arm-v7a.apk" class="download-btn">
+                        <span class="btn-label">
+                            <span>ARM v7a</span>
+                            <span class="architecture-note">32-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/youtube-morphe-v21.16.256-arm64-v8a.apk" class="download-btn">
+                        <span class="btn-label">
+                            <span>ARM64 v8a</span>
+                            <span class="architecture-note">64-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+
+                <h3 style="font-size: 1em; margin-bottom: 12px; color: #64b5f6;">Module</h3>
+                <div class="downloads">
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/youtube-morphe-module-v21.16.256-arm-v7a.zip" class="download-btn">
+                        <span class="btn-label">
+                            <span>Module ARM v7a</span>
+                            <span class="architecture-note">32-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                    <a href="https://github.com/KassMiw/MRV/releases/download/latest/youtube-morphe-module-v21.16.256-arm64-v8a.zip" class="download-btn">
+                        <span class="btn-label">
+                            <span>Module ARM64 v8a</span>
+                            <span class="architecture-note">64-bit processor</span>
+                        </span>
+                        <span class="material-icons">download</span>
+                    </a>
+                </div>
+
+                <div class="badge">
+                    <span class="material-icons" style="font-size: 0.9em; vertical-align: middle;">info</span>
+                    Pilih sesuai arsitektur perangkat Anda
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with <span style="color: #ef5350;">❤</span> by KassMiw</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/KassMiw/MRV" class="footer-link">GitHub Repository</a> • 
+                <a href="https://github.com/KassMiw/MRV/releases" class="footer-link">Latest Releases</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
